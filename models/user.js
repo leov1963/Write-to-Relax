@@ -29,7 +29,9 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         isEmail: { // does a boolean check
           msg: 'Invalid email'
-        }
+        },
+        max: 23,
+        contains: '.com'
       }
     },
     password: {
