@@ -35,18 +35,6 @@ const secondsTimer = () => {
     }, 500) 
 }
 
-// const minutesTimer = () => {
-//     const mTimer = setInterval(() => {
-//         if (clockMinutes === 0) {
-//             clearInterval(mTimer)
-//             return
-//         }
-//         else if (clockMinutes > 0) {
-//             clockMinutes--
-//         }
-//     }, 30000) 
-// }
-
 const restSecondsTimer = () => {
     const RSTimer = setInterval(() => {
         if (clockMinutes === restMinutes) {
@@ -75,5 +63,4 @@ const restSecondsTimer = () => {
 
 document.querySelector("#start").addEventListener("click", () => {
     secondsTimer()
-    minutesTimer()
 })
