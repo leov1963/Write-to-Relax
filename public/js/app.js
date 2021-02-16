@@ -32,13 +32,14 @@ const secondsTimer = () => {
             clockSeconds--
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
         }
-    }, 500) 
+    }, 50) 
 }
 
 const restSecondsTimer = () => {
     const RSTimer = setInterval(() => {
         if (clockMinutes === restMinutes) {
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+            clearInterval(RSTimer)
             return
         }
         else if (clockSeconds === 59) {
@@ -58,7 +59,7 @@ const restSecondsTimer = () => {
             clockSeconds++
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
         }
-    }, 500) 
+    }, 50) 
 }
 
 document.querySelector("#start").addEventListener("click", () => {
