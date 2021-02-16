@@ -3,10 +3,12 @@ console.log("hello")
 let clockSeconds = 00
 let clockMinutes = 2
 let clockMinutesInput = 2
-let restMinutes = 2
+let restMinutes = 1
 let innerTimer = clockMinutesInput + 1
 
 const secondsTimer = () => {
+    clockMinutes = clockMinutesInput
+    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
     const sTimer = setInterval(() => {
         if (clockSeconds === 0 && clockMinutes === 0) {
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
@@ -32,7 +34,7 @@ const secondsTimer = () => {
             clockSeconds--
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
         }
-    }, 50) 
+    }, 500) 
 }
 
 const restSecondsTimer = () => {
@@ -40,6 +42,7 @@ const restSecondsTimer = () => {
         if (clockMinutes === restMinutes) {
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
             clearInterval(RSTimer)
+            document.querySelector("#start").className = ""
             return
         }
         else if (clockSeconds === 59) {
@@ -59,9 +62,10 @@ const restSecondsTimer = () => {
             clockSeconds++
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
         }
-    }, 50) 
+    }, 500)
 }
 
 document.querySelector("#start").addEventListener("click", () => {
     secondsTimer()
+    document.querySelector("#start").className = "hidden"
 })
