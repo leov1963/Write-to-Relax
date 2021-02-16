@@ -29,7 +29,7 @@ const secondsTimer = () => {
     }, 1000) 
 }
 
-secondsTimer()
+
 
 const minutesTimer = () => {
     const mTimer = setInterval(() => {
@@ -42,4 +42,9 @@ const minutesTimer = () => {
     }, 60000) 
 }
 
-minutesTimer()
+
+
+document.querySelector("#start").addEventListener("click", () => {
+    secondsTimer()
+    minutesTimer()
+})
