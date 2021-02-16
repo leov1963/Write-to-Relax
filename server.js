@@ -46,6 +46,8 @@ app.use((req, res, next) => {
 // Controllers
 app.use('/auth', require('./controllers/auth'));
 
+app.use('/signedin', require('./controllers/signedin'));
+
 app.get('/', (req, res) => {
   res.render('index');
 });
