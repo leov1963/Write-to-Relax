@@ -16,11 +16,14 @@
         <h4 id="down-time">5:00</h4>
         <button>+</button>
     </div>
-    <div id="text-feild-control">
-        <p><textarea name="text-feild" id="text-feild" cols="30" rows="10"></textarea></p>
-    </div>
-    <div id="submit-text">
-        <button type="submit">submit</button>
-    </div>
+    <form action="/profile" method="POST">
+        <div id="text-feild-control">
+            <p><textarea name="content" id="text-feild" cols="30" rows="10"></textarea></p>
+        </div>
+        <div id="submit-text">
+            <button type="submit">submit</button>
+        </div>
+    
+    </form>
 
 <% } %>
