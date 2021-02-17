@@ -5,6 +5,7 @@ const session = require('express-session');
 const passport = require('./config/ppConfig'); //
 const flash = require('connect-flash');
 
+const db = require('./models');
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -52,10 +53,28 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/profile', isLoggedIn, (req, res) => {
-  const { id, name, email } = req.user.get(); 
-  res.render('profile', { id, name, email });
+app.get('/profile', isLoggedIn, async(req, res) => {
+  try {
+    const { name } = req.user.get(); 
+    let textposts = await db.textpost.findAll()
+    console.log(textposts + "**************************************")
+    res.render('profile', { name, textposts });
+
+  } catch(e) {
+    console.log(e)
+  }
 });
+
+
+app.post('/profile', (req, res) => {
+  console.log(req.body);
+  db.textpost.create(req.body)
+  .then((createdPost)=> {
+    console.log('Created Post = ', createdPost);
+    res.redirect('/profile');
+  });
+})
+
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
