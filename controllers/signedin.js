@@ -6,7 +6,8 @@ const db = require('../models');
 const textpost = require('../models/textpost');
 
 router.get('/', (req, res) => {
-    res.render('main-page');
+  const { id } = req.user.get(); 
+  res.render('main-page', { id });
 });
 
 module.exports = router;
