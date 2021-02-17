@@ -55,10 +55,15 @@ app.get('/', (req, res) => {
 
 app.get('/profile', isLoggedIn, async(req, res) => {
   try {
-    const { name, id } = req.user.get(); 
+    const { name, id } = req.user.get();
+    console.log("*************************************************")
+    console.log(req)
+    console.log("*************************************************")
+    // const { isdeleted } = req.textpost.get();
     let textposts = await db.textpost.findAll({
       where: {
-        id: id
+        userId: id
+        
       }
     })
     console.log(textposts + "**************************************")
@@ -79,6 +84,21 @@ app.post('/profile', (req, res) => {
   });
 })
 
+app.post('/profile/delete', async(req, res) => {
+  console.log("*******************************TEST**************************")
+  console.log(db.textpost.isdeleted)
+  try {
+    let textposts = await db.textpost.update({ isdeleted: true }, {
+      where: {
+        isdeleted: "false"
+      }
+    })
+    res.redirect('/profile')
+  } catch(e) {
+    console.log(e + "******************************")
+  }
+  
+})
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
