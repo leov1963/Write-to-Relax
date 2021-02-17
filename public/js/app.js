@@ -70,6 +70,7 @@ document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#start").className = "hidden"
     document.querySelector("#subtract-focus-time").className = "hidden"
     document.querySelector("#add-focus-time").className = "hidden"
+    document.querySelector("#subtract-down-time").className = "hidden"
 })
 
 document.querySelector("#subtract-focus-time").addEventListener("click", () => {
@@ -84,4 +85,10 @@ document.querySelector("#add-focus-time").addEventListener("click", () => {
     clockMinutesInput++
     clockMinutes++
     document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
+})
+
+document.querySelector("#subtract-down-time").addEventListener("click", () => {
+    if (restMinutes > 0)
+    restMinutes--
+    document.querySelector("#down-time").innerHTML = `${restMinutes}:00`
 })
