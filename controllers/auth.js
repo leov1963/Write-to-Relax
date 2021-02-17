@@ -2,6 +2,8 @@ const express = require('express');
 const passport = require('../config/ppConfig');
 const router = express.Router();
 
+const textpost = require('../models/textpost');
+
 // import database
 const db = require('../models');
 
