@@ -55,8 +55,12 @@ app.get('/', (req, res) => {
 
 app.get('/profile', isLoggedIn, async(req, res) => {
   try {
-    const { name } = req.user.get(); 
-    let textposts = await db.textpost.findAll()
+    const { name, id } = req.user.get(); 
+    let textposts = await db.textpost.findAll({
+      where: {
+        id: id
+      }
+    })
     console.log(textposts + "**************************************")
     res.render('profile', { name, textposts });
 
