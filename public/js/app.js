@@ -68,6 +68,7 @@ const restSecondsTimer = () => {
 document.querySelector("#start").addEventListener("click", () => {
     secondsTimer()
     document.querySelector("#start").className = "hidden"
+    document.querySelector("#subtract-focus-time").className = "hidden"
 })
 
 document.querySelector("#subtract-focus-time").addEventListener("click", () => {
