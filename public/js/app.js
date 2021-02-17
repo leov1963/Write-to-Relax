@@ -69,11 +69,19 @@ document.querySelector("#start").addEventListener("click", () => {
     secondsTimer()
     document.querySelector("#start").className = "hidden"
     document.querySelector("#subtract-focus-time").className = "hidden"
+    document.querySelector("#add-focus-time").className = "hidden"
 })
 
 document.querySelector("#subtract-focus-time").addEventListener("click", () => {
     if (clockMinutesInput > 0)
     clockMinutesInput--
     clockMinutes--
+    document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
+})
+
+document.querySelector("#add-focus-time").addEventListener("click", () => {
+    if (clockMinutesInput >= 0 && clockMinutesInput < 60)
+    clockMinutesInput++
+    clockMinutes++
     document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
 })
