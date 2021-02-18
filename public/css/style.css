@@ -1,3 +1,7 @@
+body {
+  background-color: aqua;
+}
+
 nav ul li {
   text-decoration: none;
   display: inline-block;
