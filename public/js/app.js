@@ -66,6 +66,15 @@ const restSecondsTimer = () => {
     }, 500)
 }
 
+const weatherStyle = () => {
+    if (document.querySelector("#weather-info").textContent.includes("Sunny") === true) {
+        console.log("*****************TEST**************************")
+        document.querySelector("#main-content").id = "main-content-sunny"
+    }
+}
+
+weatherStyle()
+
 document.querySelector("#start").addEventListener("click", () => {
     secondsTimer()
     document.querySelector("#start").className = "hidden"
