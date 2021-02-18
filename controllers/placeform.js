@@ -15,4 +15,13 @@ router.get("/", async(req, res) => {
     }
 })
 
+router.post("/", (req, res) => {
+    console.log(req.body);
+    db.place.create(req.body)
+    .then((createdPlace)=> {
+        console.log('Created Place = ', createdPlace);
+        res.redirect('/placeform');
+    });
+})
+
 module.exports = router;
