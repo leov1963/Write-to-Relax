@@ -49,6 +49,8 @@ app.use('/auth', require('./controllers/auth'));
 
 app.use('/signedin', require('./controllers/signedin'));
 
+app.use('/placeform', require('./controllers/placeform'));
+
 app.get('/', (req, res) => {
   res.render('index');
 });
