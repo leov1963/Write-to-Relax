@@ -3,35 +3,38 @@
     <h1>nope</h1>
 <% } else { %>
 
-    <h1>TEST Logged in page</h1>
-    <p>
-        The current temperature in your area is: <%=temperature%> degrees fahrenheit. The sky is <%=skytext%>
-    </p>
-    <a href="/profile">Profile</a>
-    <a href="/placeform">Change or add a place</a>
-    <br>
-    <button id="start">Start!</button>
-    <div id="timer-control">
-        <h2 id="time">15:00</h2>
-    </div>
-    <div id="timer-buttons">
-        <button id="subtract-focus-time">-</button>
-        <h4 id="focus-time">15:00</h4>
-        <button id="add-focus-time">+</button>
-        <button id="subtract-down-time">-</button>
-        <h4 id="down-time">5:00</h4>
-        <button id="add-down-time">+</button>
-    </div>
-    <form action="/profile" method="POST">
-        <div id="text-feild-control">
-            <p><textarea name="content" id="text-feild" cols="30" rows="10" class="hidden"></textarea></p>
+    <div id="main-content">
+        <h1>TEST Logged in page</h1>
+        <p id="weather-info">
+            <%=skytext%> 
+        </p>
+        <a href="/profile">Profile</a>
+        <a href="/placeform">Change or add a place</a>
+        <br>
+        <button id="start">Start!</button>
+        <div id="timer-control">
+            <h2 id="time">15:00</h2>
         </div>
-        <input type="hidden" name="userId" value="<%= id %>">
-        <input type="hidden" name="isdeleted" value="false">
-        <div id="submit-text">
-            <button type="submit">submit</button>
+        <div id="timer-buttons">
+            <button id="subtract-focus-time">-</button>
+            <h4 id="focus-time">15:00</h4>
+            <button id="add-focus-time">+</button>
+            <button id="subtract-down-time">-</button>
+            <h4 id="down-time">5:00</h4>
+            <button id="add-down-time">+</button>
         </div>
-    
-    </form>
+        <form action="/profile" method="POST">
+            <div id="text-feild-control">
+                <p><textarea name="content" id="text-feild" cols="30" rows="10" class="hidden"></textarea></p>
+            </div>
+            <input type="hidden" name="userId" value="<%= id %>">
+            <input type="hidden" name="isdeleted" value="false">
+            <div id="submit-text">
+                <button type="submit">submit</button>
+            </div>
+        
+        </form>
+    </div>
+
 
 <% } %>
