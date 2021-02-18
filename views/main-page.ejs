@@ -4,7 +4,11 @@
 <% } else { %>
 
     <h1>TEST Logged in page</h1>
+    <p>
+        The current temperature in your area is: <%=temperature%> degrees fahrenheit. The sky is <%=skytext%>
+    </p>
     <a href="/profile">Profile</a>
+    <a href="/placeform">Change or add a place</a>
     <br>
     <button id="start">Start!</button>
     <div id="timer-control">
