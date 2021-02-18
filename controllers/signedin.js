@@ -6,7 +6,7 @@ const weather = require('weather-js')
 const db = require('../models');
 const textpost = require('../models/textpost');
 
-router.get('/', (req, res) => {
+router.get('/:zipcode', (req, res) => {
   console.log(req.params.zipcode)
   console.log("****************************")
   console.log(req.body.zipcode)
