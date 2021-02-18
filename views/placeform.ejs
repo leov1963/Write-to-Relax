@@ -1,6 +1,15 @@
-<form>
-    <label for="location-dropdown"></label>
-    <select name="location-dropdown" id="location-dropdown">
-        <option value="94577">SL(test)</option>
-    </select>
+<form action="/placeform" method="POST">
+    <label for="place-name">Name of location:</label>
+    <input type="text" name="name" placeholder="enter name">
+    <label for="place-zipcode">Zipcode:</label>
+    <input type="number" name="zipcode" placeholder="enter zipcode">
+    <button type="submit">add!</button>
+</form>
+
+<form action="/signedin/<%=places.zipcode%>" method="GET">
+    <label for="location-dropdown">Choose a location!</label>
+    <% for (let i = 0; i < places.length; i++){%>
+        <li><a href="signedin/<%=places[i].zipcode%>"><%=places[i].name %></a></li>
+    <%}%>
+    <button type="submit">submit</button>
 </form>
