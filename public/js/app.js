@@ -14,6 +14,7 @@ const secondsTimer = () => {
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
             clearInterval(sTimer)
             restSecondsTimer()
+            document.querySelector("#text-feild").className = "hidden"
             return
         }
         else if (clockSeconds === 0 && clockMinutes === clockMinutesInput) {
@@ -72,6 +73,7 @@ document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#add-focus-time").className = "hidden"
     document.querySelector("#subtract-down-time").className = "hidden"
     document.querySelector("#add-down-time").className = "hidden"
+    document.querySelector("#text-feild").className = ""
 })
 
 document.querySelector("#subtract-focus-time").addEventListener("click", () => {
