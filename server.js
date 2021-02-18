@@ -79,8 +79,6 @@ app.post('/profile', (req, res) => {
 })
 
 app.post('/profile/delete', async(req, res) => {
-  console.log("*******************************TEST**************************")
-  console.log(db.textpost.isdeleted)
   try {
     let textposts = await db.textpost.update({ isdeleted: true }, {
       where: {
@@ -89,7 +87,6 @@ app.post('/profile/delete', async(req, res) => {
     })
     res.redirect('/profile')
   } catch(e) {
-    console.log(e + "******************************")
   }
   
 })
