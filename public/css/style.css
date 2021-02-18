@@ -15,3 +15,11 @@ h1 {
 .hidden {
   visibility: hidden;
 }
+
+#main-content {
+  background-color: brown;
+}
+
+#main-content-sunny {
+  background-color: white;
+}
