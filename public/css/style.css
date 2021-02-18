@@ -1,5 +1,5 @@
 body {
-  background-color: aqua;
+  background-color: lightblue;
 }
 
 nav ul li {
@@ -17,9 +17,9 @@ h1 {
 }
 
 #main-content {
-  background-color: brown;
+  background-color: darkgray;
 }
 
 #main-content-sunny {
-  background-color: white;
+  background-color: rgb(247, 247, 162);
 }
