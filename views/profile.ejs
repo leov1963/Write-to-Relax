@@ -10,7 +10,6 @@
     <h3>Your Work:</h3>
     <ul>
         <% for (let i = 0; i < textposts.length; i++){%>
-            <% console.log("test******") %>
             <li><p><%= textposts[i].content %></p></li>
             <form action="/profile/delete" method="POST">
                 <button>delete</button>
