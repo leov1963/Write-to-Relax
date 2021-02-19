@@ -4,33 +4,35 @@
 <% } else { %>
 
     <div class="main-content">
-        <h1>TEST Logged in page</h1>
-        <h3><%=name%></h3>
-        <p id="weather-info">
-            <%=skytext%> 
-        </p>
-        <a href="/profile">Profile</a>
-        <a href="/placeform">Change or add a place</a>
+        <div class="weather-style">
+            <h2><%=name%></h2>
+            <p id="weather-info">
+                <%=skytext%> 
+            </p>
+            <a href="/profile">Profile</a>
+            <a href="/placeform">Change or add a place</a>
+        </div>
         <br>
-        <button id="start">Start!</button>
-        <div id="timer-control">
+        <div id="start-container" class="weather-style">
+            <button id="start">Start!</button>
+
+        </div>
+        <div class="weather-style" id="timer-control">
             <h2 id="time">5:00</h2>
         </div>
-        <div id="timer-buttons">
-            <button id="subtract-focus-time">-</button>
-            <h4 id="focus-time">5:00</h4>
-            <button id="add-focus-time">+</button>
-            <button id="subtract-down-time">-</button>
-            <h4 id="down-time">2:00</h4>
-            <button id="add-down-time">+</button>
+        <div class="weather-style" id="timer-buttons">
+            <button class="timer" id="subtract-focus-time">-</button>
+            <h4 class="timer" id="focus-time">5:00</h4>
+            <button class="timer" id="add-focus-time">+</button>
+            <button class="timer" id="subtract-down-time">-</button>
+            <h4 class="timer" id="down-time">2:00</h4>
+            <button class="timer" id="add-down-time">+</button>
         </div>
         <form action="/profile" method="POST">
             <div id="text-feild-control">
                 <p><textarea name="content" id="text-feild" cols="30" rows="10" class="hidden"></textarea></p>
-            </div>
             <input type="hidden" name="userId" value="<%= id %>">
-            <input type="hidden" name="isdeleted" value="false">
-            <div id="submit-text">
+            <input type="hidden" name="isdeleted" value="false">           
                 <button type="submit">submit</button>
             </div>
         
