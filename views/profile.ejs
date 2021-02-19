@@ -12,6 +12,7 @@
         <% for (let i = 0; i < textposts.length; i++){%>
             <li><p><%= textposts[i].content %></p></li>
             <form action="/profile/delete" method="POST">
+                <input type="hidden" name="deleteId" value="<%=textposts[i].id%>">
                 <button>delete</button>
             </form>
         <%}%>
