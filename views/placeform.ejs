@@ -1,8 +1,8 @@
 <form action="/placeform" method="POST">
     <label for="place-name">Name of location:</label>
-    <input type="text" name="name" placeholder="enter name">
+    <input type="text" name="name" placeholder="enter name" required>
     <label for="place-zipcode">Zipcode:</label>
-    <input type="number" name="zipcode" placeholder="enter zipcode">
+    <input type="string" name="zipcode" placeholder="enter zipcode" minlength="5" maxlength="5" required>
     <button type="submit">add!</button>
 </form>
 
@@ -12,4 +12,4 @@
         <li><a href="signedin/<%=places[i].zipcode%>"><%=places[i].name %></a></li>
     <%}%>
     <button type="submit">submit</button>
-</form>
+</form>   
