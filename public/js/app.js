@@ -69,7 +69,7 @@ const restSecondsTimer = () => {
 const weatherStyle = () => {
     const weatherType = document.querySelector("#weather-info").textContent 
     // clear & Sunny
-    if (weatherType.includes("Sunny") || weatherType.includes("clear")) {
+    if (weatherType.includes("Sunny") || weatherType.includes("Clear")) {
         document.querySelector("#main-content").id = "main-content-sunny"
     }
     
