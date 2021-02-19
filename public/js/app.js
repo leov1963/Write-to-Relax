@@ -1,9 +1,9 @@
 console.log("hello")
 
 let clockSeconds = 00
-let clockMinutes = 2
-let clockMinutesInput = 2
-let restMinutes = 1
+let clockMinutes = 5
+let clockMinutesInput = 5
+let restMinutes = 2
 let innerTimer = clockMinutesInput + 1
 
 const secondsTimer = () => {
@@ -67,10 +67,12 @@ const restSecondsTimer = () => {
 }
 
 const weatherStyle = () => {
-    if (document.querySelector("#weather-info").textContent.includes("Sunny") === true) {
-        console.log("*****************TEST**************************")
+    const weatherType = document.querySelector("#weather-info").textContent 
+    // clear & Sunny
+    if (weatherType.includes("Sunny") || weatherType.includes("clear")) {
         document.querySelector("#main-content").id = "main-content-sunny"
     }
+    
 }
 
 weatherStyle()
@@ -90,6 +92,7 @@ document.querySelector("#subtract-focus-time").addEventListener("click", () => {
     clockMinutesInput--
     clockMinutes--
     document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
+    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
 })
 
 document.querySelector("#add-focus-time").addEventListener("click", () => {
@@ -97,16 +100,19 @@ document.querySelector("#add-focus-time").addEventListener("click", () => {
     clockMinutesInput++
     clockMinutes++
     document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
+    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
 })
 
 document.querySelector("#subtract-down-time").addEventListener("click", () => {
     if (restMinutes > 0)
     restMinutes--
     document.querySelector("#down-time").innerHTML = `${restMinutes}:00`
+    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
 })
 
 document.querySelector("#add-down-time").addEventListener("click", () => {
     if (restMinutes >= 0 && restMinutes < clockMinutesInput - 1)
     restMinutes++
     document.querySelector("#down-time").innerHTML = `${restMinutes}:00`
+    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
 })
