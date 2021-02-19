@@ -90,8 +90,7 @@ app.post('/profile/delete', async(req, res) => {
     })
     res.redirect('/profile')
   } catch(e) {
-  }
-  
+  } 
 })
 
 const PORT = process.env.PORT || 3000;
@@ -100,18 +99,4 @@ const server = app.listen(PORT, () => {
 });
 
 module.exports = server;
-
-
-
-// espn.com
-
-// basketball/college
-// basketball/nba
-// basketball/gleague
-// basketball/europe
-
-// football
-// baseball
-// ...
-
 
