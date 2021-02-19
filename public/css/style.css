@@ -16,10 +16,10 @@ h1 {
   visibility: hidden;
 }
 
-#main-content {
+.main-content {
   background-color: darkgray;
 }
 
-#main-content-sunny {
+.main-content-sunny {
   background-color: rgb(247, 247, 162);
 }
