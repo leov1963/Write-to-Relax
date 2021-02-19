@@ -84,7 +84,8 @@ app.post('/profile/delete', async(req, res) => {
   try {
     let textposts = await db.textpost.update({ isdeleted: true }, {
       where: {
-        isdeleted: "false"
+        isdeleted: "false",
+        id: req.body.deleteId
       }
     })
     res.redirect('/profile')
