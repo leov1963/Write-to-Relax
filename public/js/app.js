@@ -71,6 +71,8 @@ const weatherStyle = () => {
     // clear & Sunny
     if (weatherType.includes("Sunny") || weatherType.includes("Clear")) {
         document.querySelector(".main-content").className = "main-content-sunny"
+        document.getElementsByClassName("weather-style").className = "weather-style-sunny"
+        console.log(document.getElementsByClassName("weather-style").className)
     }
     
 }
