@@ -16,7 +16,8 @@ router.get('/:zipcode', (req, res) => {
     const temperature = result[0].current.temperature
     const skytext = result[0].current.skytext
     const zipcode = result[0].location.zipcode
-    res.render('main-page', { id, temperature, skytext, zipcode });
+    const name = result[0].location.name
+    res.render('main-page', { id, temperature, skytext, zipcode, name });
   })
 });
 
