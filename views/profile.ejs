@@ -1,20 +1,22 @@
-<h2>Profile Page</h2>
-
-<a href="/placeform">return to place choice!</a>
-
-<h3>Welcome to your PROFILE</h3>
-
-<p>Name: <%= name %></p>
-
-<div id="text-posts">
-    <h3>Your Work:</h3>
-    <ul>
-        <% for (let i = 0; i < textposts.length; i++){%>
-            <li><p><%= textposts[i].content %></p></li>
-            <form action="/profile/delete" method="POST">
-                <input type="hidden" name="deleteId" value="<%=textposts[i].id%>">
-                <button>delete</button>
-            </form>
-        <%}%>
-    </ul>
+<div id="profile">
+    <h2>Profile Page</h2>
+    
+    <a href="/placeform">return to place choice!</a>
+    
+    <h3>Welcome to your PROFILE</h3>
+    
+    <p>Name: <%= name %></p>
+    
+    <div id="text-posts">
+        <h3>Your Work:</h3>
+        <ul>
+            <% for (let i = 0; i < textposts.length; i++){%>
+                <li><p id="text-box"><%= textposts[i].content %></p></li>
+                <form action="/profile/delete" method="POST">
+                    <input type="hidden" name="deleteId" value="<%=textposts[i].id%>">
+                    <button>delete</button>
+                </form>
+            <%}%>
+        </ul>
+    </div>   
 </div>
