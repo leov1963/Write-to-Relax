@@ -25,7 +25,7 @@ h1 {
 }
 
 .main-content-sunny {
-  background-color: rgb(247, 247, 162);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(250,255,90,1) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@ h1 {
 }
 
 .weather-style-sunny {
-  background-color: lightskyblue;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(113,197,255,1) 100%);
 }
 
 .weather-style {
@@ -64,7 +64,7 @@ h1 {
 
 #weather-info {
   margin: 20px;
-  padding: 40px 43px;
+  padding: 20px 60px 40px 60px;
   border-radius: 50%;
   text-align: center;
 }
