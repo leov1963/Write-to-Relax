@@ -21,6 +21,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
 }
 
 .main-content-sunny {
@@ -28,6 +29,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
 }
 
 .weather-style-sunny {
@@ -49,10 +51,27 @@ h1 {
   justify-content: space-between;
   padding:20px;
   margin: 20px;
+  border-radius: 50%;
 }
 
 
 
 #start-container {
+  padding: 5px 130px 20px 130px;
+  margin: 20px;
+  border-radius: 50%;
+}
+
+#weather-info {
+  margin: 20px;
+  padding: 40px 43px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#text-feild-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 20px;
 }
