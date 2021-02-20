@@ -4,7 +4,7 @@
 <% } else { %>
 
     <div class="main-content">
-        <div class="weather-style">
+        <div id="weather-info" class="weather-style">
             <h2><%=name%></h2>
             <p id="weather-info">
                 <%=skytext%> 
@@ -14,11 +14,9 @@
         </div>
         <br>
         <div id="start-container" class="weather-style">
+            <h2 id="time">5:00</h2>
             <button id="start">Start!</button>
 
-        </div>
-        <div class="weather-style" id="timer-control">
-            <h2 id="time">5:00</h2>
         </div>
         <div class="weather-style" id="timer-buttons">
             <button class="timer" id="subtract-focus-time">-</button>
@@ -31,13 +29,10 @@
         <form action="/profile" method="POST">
             <div id="text-feild-control">
                 <p><textarea name="content" id="text-feild" cols="30" rows="10" class="hidden"></textarea></p>
-            <input type="hidden" name="userId" value="<%= id %>">
-            <input type="hidden" name="isdeleted" value="false">           
+                <input type="hidden" name="userId" value="<%= id %>">
+                <input type="hidden" name="isdeleted" value="false">           
                 <button type="submit">submit</button>
-            </div>
-        
+            </div>        
         </form>
     </div>
-
-
 <% } %>
