@@ -88,6 +88,15 @@ button:active {
   background-color: lightgrey;
 }
 
+.delete {
+  background-color:rgb(173, 26, 26);
+}
+
+.delete:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(253, 161, 161);  
+}
+
 .profile-title {
   margin-left: 40px;
 }
