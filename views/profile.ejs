@@ -14,7 +14,7 @@
                 <li><p id="text-box"><%= textposts[i].content %></p></li>
                 <form action="/profile/delete" method="POST">
                     <input type="hidden" name="deleteId" value="<%=textposts[i].id%>">
-                    <button>delete</button>
+                    <button class="delete">delete</button>
                 </form>
             <%}%>
         </ul>
