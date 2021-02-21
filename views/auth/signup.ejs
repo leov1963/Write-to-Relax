@@ -1,12 +1,14 @@
-<form action="/auth/signup" method="POST">
-  <label for="new-email">Email</label>
-  <input id="new-email" type="email" name="email" required>
+<form class="auth" action="/auth/signup" method="POST">
+  <label class="auth-element" for="new-email">Email</label>
+  <input class="auth-element" id="new-email" type="email" name="email" required>
 
-  <label for="new-name">Name</label>
-  <input id="new-name" type="text" name="name" required>
+  <label class="auth-element" for="new-name">Name</label>
+  <input class="auth-element" id="new-name" type="text" name="name" required>
 
-  <label for="new-password">Password</label>
-  <input id="new-password" type="password" name="password" required>
+  <label class="auth-element" for="new-password">Password</label>
+  <input class="auth-element" id="new-password" type="password" name="password" required>
 
-  <input type="submit" value="Sign up">
+  <input class="auth-element" type="submit" value="Sign up">
 </form>
+
+<a href="/">back</a>
