@@ -69,7 +69,7 @@ button {
   color: white;
   background-color: rgb(97, 123, 145);
   border: solid rgb(197, 197, 197);
-  border-radius: 5px;
+  border-radius: 25px;
   border-width: 2px;
   box-shadow: 0 5px rgb(37, 34, 61);
   font-family: "Press Start 2P";
@@ -95,6 +95,18 @@ button:active {
 .delete:hover {
   color: rgb(0, 0, 0);
   background-color: rgb(253, 161, 161);  
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-element {
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .profile-title {
