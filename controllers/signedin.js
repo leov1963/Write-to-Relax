@@ -21,4 +21,19 @@ router.get('/:zipcode', (req, res) => {
   })
 });
 
+router.post('/:zipcode', (req, res) => {
+  console.log(req.body.zipcode + "************************")
+  console.log(req.params)
+  try{
+      db.place.destroy({
+        where: {
+          zipcode: req.params.zipcode
+        }
+      })
+      res.redirect('/placeform');
+  } catch(error) {
+      console.log(error)
+  }
+});
+
 module.exports = router;
