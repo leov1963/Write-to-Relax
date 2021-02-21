@@ -93,31 +93,35 @@ document.querySelector("#start").addEventListener("click", () => {
 })
 
 document.querySelector("#subtract-focus-time").addEventListener("click", () => {
-    if (clockMinutesInput > 0)
-    clockMinutesInput--
-    clockMinutes--
-    document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
-    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+    if (clockMinutesInput > 0) {
+        clockMinutesInput--
+        clockMinutes--
+        document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
+        document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}` 
+    }
 })
 
 document.querySelector("#add-focus-time").addEventListener("click", () => {
-    if (clockMinutesInput >= 0 && clockMinutesInput < 60)
-    clockMinutesInput++
-    clockMinutes++
-    document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
-    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+    if (clockMinutesInput >= 0 && clockMinutesInput < 60) {
+        clockMinutesInput++
+        clockMinutes++
+        document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
+        document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+    }
 })
 
 document.querySelector("#subtract-down-time").addEventListener("click", () => {
-    if (restMinutes > 0)
-    restMinutes--
-    document.querySelector("#down-time").innerHTML = `${restMinutes}:00`
-    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+    if (restMinutes > 0) {
+        restMinutes--
+        document.querySelector("#down-time").innerHTML = `${restMinutes}:00`
+        document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+    }
 })
 
 document.querySelector("#add-down-time").addEventListener("click", () => {
-    if (restMinutes >= 0 && restMinutes < clockMinutesInput - 1)
-    restMinutes++
-    document.querySelector("#down-time").innerHTML = `${restMinutes}:00`
-    document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+    if (restMinutes >= 0 && restMinutes < clockMinutesInput - 1) {
+        restMinutes++
+        document.querySelector("#down-time").innerHTML = `${restMinutes}:00`
+        document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+    }
 })
