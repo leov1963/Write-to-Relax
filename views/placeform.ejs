@@ -5,10 +5,12 @@
     <input class="location" type="string" name="zipcode" placeholder="enter zipcode" minlength="5" maxlength="5" required>
     <button class="location" type="submit">add!</button>
 </form>
-
 <form class="locations" action="/signedin/<%=places.zipcode%>" method="GET">
     <label for="location-dropdown">Choose a location!</label>
     <% for (let i = 0; i < places.length; i++){%>
         <li class="location" ><a href="signedin/<%=places[i].zipcode%>"><%=places[i].name %></a></li>
     <%}%>
-</form>   
+</form> 
+<div class="locations">
+    <a href="/profile"> profile</a>  
+</div>
