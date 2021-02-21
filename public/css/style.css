@@ -25,7 +25,6 @@ h4 {
 
 h3 {
   text-align: center;
-  margin-left: 40px;
 }
 
 p {
@@ -87,6 +86,10 @@ button:active {
   box-shadow: 0 2px rgb(32, 29, 53);
   transform: translateY(4px);
   background-color: lightgrey;
+}
+
+.profile-title {
+  margin-left: 40px;
 }
 
 .hidden {
