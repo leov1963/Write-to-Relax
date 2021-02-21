@@ -37,7 +37,7 @@ router.post('/signup', (req, res) => {
       console.log(`${user.name} was created....`);
       // flash messages
       const successObject = {
-        successRedirect: '/',
+        successRedirect: '/placeform',
         successFlash: `Welcome ${user.name}. Account was created and logging in...`
       }
       // passport authenicate
