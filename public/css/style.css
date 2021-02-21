@@ -25,12 +25,13 @@ li {
 }
 
 a {
-  background-color: rgba(107, 99, 116, 0.349);
+  background-color: rgba(107, 99, 116, 0.658);
   color: white;
   padding: .5em 1em;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 25px;
+  margin: 5px;
 }
 
 a:hover {
@@ -95,6 +96,11 @@ a:active {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+}
+
+.main-page-links {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 #timer-buttons {
