@@ -1,15 +1,26 @@
 body {
   background-color: antiquewhite;
+  text-align: center;
 }
 
 nav ul li {
+  margin: auto;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin-right: .3em;
 }
 
-h1 {
-  color: chartreuse;
+nav {
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 25px;
 }
 
 p {
@@ -40,6 +51,37 @@ a:hover {
 
 a:active {
   background-color: black;
+}
+
+button {
+
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  font-weight: 800;
+  transition: color .5s;
+  transition: background-color .7s;
+  color: white;
+  background-color: rgb(97, 123, 145);
+  border: solid rgb(197, 197, 197);
+  border-radius: 5px;
+  border-width: 2px;
+  box-shadow: 0 5px rgb(37, 34, 61);
+  font-family: "Press Start 2P";
+  font-size: 20px;
+  min-width: 30px;
+}
+
+button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(144, 188, 199);  
+}
+
+button:active {
+  box-shadow: 0 2px rgb(32, 29, 53);
+  transform: translateY(4px);
+  background-color: lightgrey;
 }
 
 .hidden {
@@ -73,6 +115,9 @@ a:active {
 
 .timer {
   margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .locations {
@@ -103,6 +148,7 @@ a:active {
   flex-direction: column-reverse;
 }
 
+
 #timer-buttons {
   display: flex;
   flex-direction: row;
@@ -110,6 +156,7 @@ a:active {
   padding:20px;
   margin: 20px;
   border-radius: 50%;
+  max-width: 350px;
 }
 
 #start-container {
