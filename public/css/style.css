@@ -1,3 +1,12 @@
+header {
+  margin: 0 25px 0 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 body {
   background-color: antiquewhite;
   text-align: center;
@@ -10,16 +19,18 @@ body {
 }
 
 nav ul li {
-  margin: auto;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-nav {
-  margin-left: 20px;
-  margin-right: 50px;
-}
+/* ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
 
 h2 {
   font-size: 35px;
