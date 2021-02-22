@@ -70,7 +70,6 @@ app.get('/profile', isLoggedIn, async(req, res) => {
   }
 });
 
-
 app.post('/profile', (req, res) => {
   console.log(req.body);
   db.textpost.create(req.body)
@@ -92,6 +91,11 @@ app.post('/profile/delete', async(req, res) => {
   } catch(e) {
   } 
 })
+
+// Handle 404
+app.use(function(req, res) {
+  res.render("404");
+});
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
