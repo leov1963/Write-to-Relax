@@ -9,6 +9,7 @@ let innerTimer = clockMinutesInput + 1
 const secondsTimer = () => {
     clockMinutes = clockMinutesInput
     document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
+    document.querySelector("#time").style.color = "black"
     const sTimer = setInterval(() => {
         if (clockSeconds === 0 && clockMinutes === 0) {
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
@@ -30,9 +31,11 @@ const secondsTimer = () => {
         }
         else if (clockSeconds >= 11) {
             clockSeconds--
+            textColor()
             document.querySelector("#time").innerHTML = `${clockMinutes}:${clockSeconds}`
         } else if (clockSeconds <= 10) {
             clockSeconds--
+            textColor()
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
         }
     }, 500) 
@@ -53,14 +56,17 @@ const restSecondsTimer = () => {
         }
         else if (clockSeconds === 9) {
             clockSeconds++
+            restColor()
             document.querySelector("#time").innerHTML = `${clockMinutes}:${clockSeconds}`
         }
         else if (clockSeconds >= 10) {
             clockSeconds++
+            restColor()
             document.querySelector("#time").innerHTML = `${clockMinutes}:${clockSeconds}`
         } 
         else if (clockSeconds <= 8) {
             clockSeconds++
+            restColor()
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
         }
     }, 500)
@@ -81,6 +87,18 @@ const weatherStyle = () => {
 }
 
 weatherStyle()
+
+const textColor = () => {
+    if (clockMinutes === 0) {
+        document.querySelector("#time").style.color = "red"
+    }
+}
+
+const restColor = () => {
+    if (clockMinutes >= 0) {
+        document.querySelector("#time").style.color = "green"
+    }
+}
 
 document.querySelector("#start").addEventListener("click", () => {
     secondsTimer()
@@ -125,3 +143,4 @@ document.querySelector("#add-down-time").addEventListener("click", () => {
         document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
     }
 })
+
