@@ -70,10 +70,10 @@ const weatherStyle = () => {
     const weatherType = document.querySelector("#weather-info").textContent 
     // clear & Sunny
     if (weatherType.includes("Sunny") || weatherType.includes("Clear")) {
-        document.querySelector(".main-content").className = "main-content-sunny"
-        const weatherStyle = document.querySelectorAll(".weather-style")
+        document.querySelector(".main-content").classList.add("sunny-background")
+        const weatherStyle = document.querySelectorAll(".cloudy-element")
         for (let i = 0; i < weatherStyle.length; i++) {
-            weatherStyle[i].className = "weather-style-sunny"
+            weatherStyle[i].className = "sunny-element"
         }
         
     }
