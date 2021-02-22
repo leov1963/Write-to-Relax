@@ -38,7 +38,7 @@ const secondsTimer = () => {
             textColor()
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
         }
-    }, 500) 
+    }, 1000) 
 }
 
 const restSecondsTimer = () => {
@@ -69,7 +69,7 @@ const restSecondsTimer = () => {
             restColor()
             document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
         }
-    }, 500)
+    }, 1000)
 }
 
 const weatherStyle = () => {
