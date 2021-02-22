@@ -3,8 +3,8 @@
     <h1>nope</h1>
 <% } else { %>
 
-    <div class="main-content">
-        <div id="weather-info" class="weather-style">
+    <div class="main-content foo">
+        <div id="weather-info" class="cloudy-element">
             <h1><%=name%></h1>
             <p>
                 <%=skytext%> 
@@ -15,18 +15,22 @@
             </div>
         </div>
         <br>
-        <div id="start-container" class="weather-style">
-            <h2 id="time">5:00</h2>
+        <div id="start-container" class="cloudy-element">
+            <div id="time" class="timer-countdown">5:00</div>
             <button id="start">Start!</button>
 
         </div>
-        <div class="weather-style" id="timer-buttons">
-            <button class="timer" id="subtract-focus-time">-</button>
-            <h4 class="timer" id="focus-time">5:00</h4>
-            <button class="timer" id="add-focus-time">+</button>
-            <button class="timer" id="subtract-down-time">-</button>
-            <h4 class="timer" id="down-time">2:00</h4>
-            <button class="timer" id="add-down-time">+</button>
+        <div class="cloudy-element" id="timer-buttons">
+            <div class="timer-button-container">
+                <button class="timer" id="subtract-focus-time">-</button>
+                <h4 class="timer" id="focus-time">5:00</h4>
+                <button class="timer" id="add-focus-time">+</button>    
+            </div>
+            <div class="timer-button-container">
+                <button class="timer" id="subtract-down-time">-</button>
+                <h4 class="timer" id="down-time">2:00</h4>
+                <button class="timer" id="add-down-time">+</button>
+            </div>            
         </div>
         <form action="/profile" method="POST">
             <div id="text-feild-control">
