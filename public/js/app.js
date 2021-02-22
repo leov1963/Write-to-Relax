@@ -93,7 +93,7 @@ document.querySelector("#start").addEventListener("click", () => {
 })
 
 document.querySelector("#subtract-focus-time").addEventListener("click", () => {
-    if (clockMinutesInput > 0) {
+    if (clockMinutesInput > 0 && clockMinutesInput > restMinutes) {
         clockMinutesInput--
         clockMinutes--
         document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
