@@ -12,6 +12,23 @@ I've always enjoyed creative writing but I have difficulty focusing or finding t
 ***
 ---
 
+## Screenshots
+
+![image path](./public/assets/screenshot1.png)
+
+![image path](./public/assets/screenshot2.png)
+
+![image path](./public/assets/screenshot3.png)
+
+![image path](./public/assets/screenshot4.png)
+
+![image path](./public/assets/screenshot5.png)
+
+![image path](./public/assets/screenshot6.png)
+
+***
+---
+
 ## User Stories and Wire Frames
 
 ### Home Page:
@@ -56,3 +73,9 @@ ERD (Entity Relationship Diagram) for the Database.
 
 ---
 ***
+
+## Installation:
+
+- run npm install to install required technologies
+
+- Seed database and migrate it with sequelize
