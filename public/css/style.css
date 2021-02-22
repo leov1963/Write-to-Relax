@@ -127,14 +127,14 @@ button:active {
 }
 
 .profile-title {
-  margin-left: 40px;
+  margin-left: 35px;
 }
 
 .hidden {
   visibility: hidden;
 }
 
-.foo {
+.cloudy {
   background: linear-gradient(0deg, rgb(182, 234, 255) 0%, rgb(117, 117, 117) 100%);
 }
 
