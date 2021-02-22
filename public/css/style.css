@@ -229,14 +229,14 @@ button:active {
   display: flex;
   flex-direction: row;
   padding: 20px 0;
-  border-radius: 50%;
+  border-radius: 25px;
   width: 90%;
 }
 
 #start-container {
   padding: 10px 0px 20px 0px;
   margin: 20px;
-  border-radius: 50%;
+  border-radius: 25px;
   width: 90%;
 }
 
