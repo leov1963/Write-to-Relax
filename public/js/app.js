@@ -108,10 +108,11 @@ document.querySelector("#start").addEventListener("click", () => {
     document.querySelector("#subtract-down-time").className = "hidden"
     document.querySelector("#add-down-time").className = "hidden"
     document.querySelector("#text-feild").className = ""
+    document.querySelector("#submit").className = ""
 })
 
 document.querySelector("#subtract-focus-time").addEventListener("click", () => {
-    if (clockMinutesInput > 0 && clockMinutesInput > restMinutes) {
+    if (clockMinutesInput > 1 && clockMinutesInput > restMinutes) {
         clockMinutesInput--
         clockMinutes--
         document.querySelector("#focus-time").innerHTML = `${clockMinutesInput}:00`
@@ -129,7 +130,7 @@ document.querySelector("#add-focus-time").addEventListener("click", () => {
 })
 
 document.querySelector("#subtract-down-time").addEventListener("click", () => {
-    if (restMinutes > 0) {
+    if (restMinutes > 1) {
         restMinutes--
         document.querySelector("#down-time").innerHTML = `${restMinutes}:00`
         document.querySelector("#time").innerHTML = `${clockMinutes}:0${clockSeconds}`
